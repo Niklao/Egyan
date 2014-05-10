@@ -1,12 +1,15 @@
 Egyan::Application.routes.draw do
+  get "login/univ"
+  post "register/entered" => "register#entered"
   get "signup" => "register#author" 
   get "home/index"
-  get "register/yup"
+   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
  root 'home#index'
+ 
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

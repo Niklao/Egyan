@@ -3,8 +3,12 @@ class RegisterController < ApplicationController
   def author
     @user=User.new
   end
-  def yup
-    @user=User.new(params[:user])
-    user.save
+  def entered
+    @user=User.new{params[:user]}
+    if @user.save
+      
+     else
+      render author
+    end
   end
 end

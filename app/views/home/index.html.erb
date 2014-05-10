@@ -39,7 +39,7 @@
 			<li class="divider">
 			</li>
 			<li>
-				<%= link_to(:signup)  %>
+				<%= link_to "register_author_path"  %>
 			</li>
 		</ul>
 	</div>
@@ -75,6 +75,13 @@
 				</div>
 				<div class="modal-body">
 					<p>Please enter your correct email and password</p>
+					<%= form_for @user, url: {action: "entered"}, html: {class: "form_horizontal"} do |f| %>
+		  				<%= f.label(:email_id , "ID" )  %>
+		  				<%= f.text_field :email_id , class: "form-control "%>
+		  				<%= f.label :password , class: "control-label col-xs-3" %>
+		  				<%= f.password_field :password  , class: "form-control tip-top"  %>
+		  				<%= f.submit "Create" , class: "btn btn-primary"%>
+		  			<% end %>
 					<label>ID</label>
 					<input type="email" class="form-control" placeholder="type username here..." /><br>
 					<label>Password</label>
