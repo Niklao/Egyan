@@ -1,98 +1,40 @@
 <div class="container-fluid">
-	<div id="header" style="background-color:#470024;height: 138px;width:1366px;" class="jumbotron">
+	<div id="header" style="background-color:#6f5499;height: 138px;width:1366px;" class="jumbotron">
 		<h1 style="position: absolute; top:5px; left:300px;color:#F0D01A">E-GYAAN</h1>
 		<h3 style="position: absolute; top:60px; left:500px;">....reading redefined</h3>
 		<div class="btn-group" style="position: absolute; top:20px; left:1020px; float:right" >
-		<!--<a href="#myModal" class="btn btn-lg btn-primary pull-right button glyphicon glyphicon-log-in dropdown-toggle" data-toggle="dropdown"style="position: absolute; top:50px; left:1050px;"> LOGIN <span class="caret"></span></a>-->
-			<button type="button" class="btn btn-primary button dropdown-toggle glyphicon glyphicon-log-in "  data-toggle="dropdown">
-			SIGN IN 
-			<span class="caret">
-			</span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-				<li>
-					<a href="#myModal" data-toggle="modal">READER</a>
-				</li>
-				<li class="divider">
-				</li>
-				<li>
-					<a href="#myModal1" data-toggle="modal">
-						AUTHOR
-					</a>
-				</li>
-			</ul>
+			
+			<%= link_to(controller: "register" , action: "author") do %>
+				<button type="button" class="btn button glyphicon-pencil ">
+					SIGN UP
+				</button>
+			<% end %>
+			<a href="#myModal" data-toggle="modal">
+				SIGN IN
+			</a>
 		</div>
-		
-		
-		<!--<a href="#" class="btn btn-lg btn-primary pull-right button glyphicon glyphicon-log-in" style="position: absolute; top:100px; left:1050px;" data-toggle="modal"> LOGIN   as   author</a>
-		<a href="#" class="btn btn-lg btn-primary pull-left button glyphicon glyphicon-pencil" data-toggle="modal" style="position: absolute; top:50px; left:10px;"> SIGN UP </a>-->
-	<div class="btn-group" style="position: absolute; top:55px; left:1020px; float:right">
-		<button type="button" class="btn btn-primary dropdown-toggle button glyphicon glyphicon-pencil "  data-toggle="dropdown">
-			SIGN UP 
-			<span class="caret">
-			</span>
-		</button>
-		<ul class="dropdown-menu" role="menu">
-			<li>
-				<a href="#">READER</a>
-			</li>
-			<li class="divider">
-			</li>
-			<li>
-				<%= link_to "register_author_path"  %>
-			</li>
-		</ul>
-	</div>
+		<div class="btn-group" style="position: absolute; top:55px; left:1020px; float:right">
+			
+		</div>
 	</div>
 	<div id="myModal" class="modal fade">
 		<div  class="modal-dialog">
 			<div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 class="modal-title">LOGIN FOR READERS</h4>
-            </div>
-            <div class="modal-body">
-                <p>Please enter your correct email and password</p>
-				<label>User Name</label>
-				<input type="email" class="form-control" placeholder="type username here..." /><br>
-				<label>Password</label>
-				<input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password">
-			</div>
-			<div class="modal-footer">
-				<label><input type="checkbox"> Remember me</label>
-				<button type="button" class="btn btn-primary">Login</button>
-				<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-            </div>
-			</div>
-		</div>
-	</div>
-	<div id="myModal1" class="modal fade">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-header">
-					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-					<h4 class="modal-title">LOGIN FOR AUTHORS</h4>
+				<%= form_for @user, url: {controller: "login" , action: "auth"} , html: {class: "form_horizontal"} do |f| %>
+		      	<div class="modal-header">
+		       		<h4 class="modal-title text-left" id="myModalLabel">LOGIN</h4>
+		      	</div>
+		      	<div class="modal-body">
+		      	 	<%= f.label(:email_id ,  "User ID" , class: "control-label"  ) %>
+			    	<%= f.text_field(:email_id , "User" , class: "form-control tip-top") %>
+			  		<%= f.label(:password ,  "Birth Date" , class: "control-label" ) %>
+			  		<%= f.password_field :password  , class: "form-control tip-top"  %>
 				</div>
-				<div class="modal-body">
-					<p>Please enter your correct email and password</p>
-					<%= form_for @user, url: {action: "entered"}, html: {class: "form_horizontal"} do |f| %>
-		  				<%= f.label(:email_id , "ID" )  %>
-		  				<%= f.text_field :email_id , class: "form-control "%>
-		  				<%= f.label :password , class: "control-label col-xs-3" %>
-		  				<%= f.password_field :password  , class: "form-control tip-top"  %>
-		  				<%= f.submit "Create" , class: "btn btn-primary"%>
-		  			<% end %>
-					<label>ID</label>
-					<input type="email" class="form-control" placeholder="type username here..." /><br>
-					<label>Password</label>
-					<input type="password" class="form-control" id="exampleInputEmail1" placeholder="Password">
-				</div>
-				<div class="modal-footer">
-					<label><input type="checkbox"> Remember me</label>
-					<button type="button" class="btn btn-primary">Login</button>
-					<button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-				</div>
-			</div>
+		      	<div class="modal-footer">
+		        	<%= f.submit "Login" , class: "btn btn-info"%>
+		      	</div>
+		      	<% end %>
+    		</div>
 		</div>
 	</div>
 	<div class="row">

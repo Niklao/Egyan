@@ -1,8 +1,10 @@
 Egyan::Application.routes.draw do
-  get "login/univ"
+  get "dashboard/index"
+  post "login/auth"
   post "register/entered" => "register#entered"
   get "signup" => "register#author" 
   get "home/index"
+  get "login" => "login#univ" 
    
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

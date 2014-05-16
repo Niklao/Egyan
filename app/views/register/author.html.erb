@@ -14,8 +14,17 @@
 		  <%= f.label(:birth_date ,  "Birth Date" , class: "control-label col-xs-3" ) %>
 		  <%= f.date_select( :birth_date ,class: "form-control" )%>
 		  <%= f.label(:address ,  "Address" , class: "control-label col-xs-3" ) %>
-		  <%= f.text_area( :address ,class: "form-control" )%>
-		  <%= f.submit "Create" , class: "btn btn-primary"%>
-		  
+		  <%= f.text_area(:address ,class: "form-control" )%>
+		  <%= f.label :gender, "Gender" , class: "control-label col-xs-3" %>
+		  <%= f.select(:gender , [ [ '-' , 1 ] , [ 'Male' , 2 ] , [ 'Female' , 3]] , class: "form-control tip-top") %>
+		  <%= check_box_tag(:agree , "" , html: { onselect: "agree()" } ) %>
+		  I Agree to terms and condition
+		  <%= f.submit "Create" , class: "btn btn-primary" , disabled: "disabled"%>
 		<% end %>
+		<script type="text/javascript">
+			function agree () {
+				alert("hello");
+			 document.getElementById("agree").style.disabled="enabled";
+			}
+		</script>
 	</div>
