@@ -9,11 +9,16 @@ class LoginController < ApplicationController
 
     if user
       cookies[:user] = user
-      redirect_to dashboard_index_path , status: 301
+      redirect_to store_path , status: 301
     else
     
    flash.now.alert = "its working"
       redirect_to login_path
     end
+  end
+  
+  def logout
+    cookies.delete :user
+    redirect_to login_path 
   end
 end

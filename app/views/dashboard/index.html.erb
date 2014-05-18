@@ -1,3 +1,219 @@
 <h1>Dashboard#index</h1>
+	<nav class="navbar navbar-inverse  navbar-fixed-top " role="navigation">
+	  <div class="container-fluid" >
+	    <!-- Brand and toggle get grouped for better mobile display -->
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">E-GYAAN</a>
+	    </div>
+	 
+	        <ul class="nav navbar-nav navbar-right">
+	        	<li class="dropdown">
+	          		<a href="#" class="dropdown-toggle" data-toggle="dropdown">Hi <%= @user_name %> <b class="caret"></b></a>
+	          		<ul class="dropdown-menu">
+	            		<li><%= link_to "Setting"  %></li>
+			           	<li class="divider"></li>
+			            <li><%= link_to( "Logout" , logout_path )  %></li>
+	          		</ul>
+	        	</li>
+	      	</ul>
+	
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+	     
+	      
+	    </div>
+	  </div>
+	</nav>
 
-<%= @firast_name_id %>
+	<header class="jumbotron subhead" id="overview" style="background-color:#6F5499; " >
+	  <div class="container">
+	    <h1 style="color: #F0D01A">Egyaan</h1>
+	  </div>
+	</header>
+
+  <div class="row">
+  <div class="col-md-3">
+    <div class="sidebar-nav">
+      <div class="navbar navbar-default" role="navigation">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <span class="visible-sm visible-xs navbar-brand">Sidebar menu</span>
+        </div>
+        <div class="navbar-collapse collapse sidebar-navbar-collapse portfolioFilter">
+          <ul class="nav navbar-nav">
+			<li><a href="#Academic and test prep" ><i class="icon-chevron-right"></i> Academic and test prep</a></li>
+			<li><a href="#Biographies & autobiographies" ><i class="icon-chevron-right"></i> Biographies & autobiographies</a></li>
+			<li><a href="#History "><i class="icon-chevron-right" ></i> History </a></li>
+			<li><a href="# Politics"><i class="icon-chevron-right"></i> Politics</a></li>
+			<li><a href="#Literature" ><i class="icon-chevron-right"></i>Literature</a></li>
+			<li><a href="# Fiction"><i class="icon-chevron-right"></i> Fiction</a></li>
+			<li><a href="#Religion"><i class="icon-chevron-right"></i> Religion</a></li>
+			<li><a href="#Science and Technology"><i class="icon-chevron-right"></i> Science and Technology</a></li>
+			<li><a href="#Computers and Internet"><i class="icon-chevron-right"></i> Computers and Internet</a></li>
+			<li><a href="# Novels"><i class="icon-chevron-right"></i> Novels</a></li>
+			<li><a href="#Comics"><i class="icon-chevron-right"></i>Comics</a></li>
+			<li><a href="#College Text & Reference"><i class="icon-chevron-right"></i> College Text & Reference</a></li>
+			<li><a href="#Business, Investing and Management"><i class="icon-chevron-right"></i>Business, Investing and Management</a></li>
+			<li><a href="#Families & Relationships"><i class="icon-chevron-right"></i> Families & Relationships</a></li>
+			<li><a href="#Cooking, Food & Wine"><i class="icon-chevron-right"></i> Cooking, Food & Wine</a></li>
+			<li><a href="#Health & Fitness"><i class="icon-chevron-right"></i>Health & Fitness</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+  </div>
+
+  <div class="portfolioFilter">
+
+	<a href="#" data-filter="*" class="current" style="color:#FFFFFF">All Categories</a>
+	<a href="#" data-filter=".people" style="color:#FFFFFF">featured</a>
+	<a href="#" data-filter=".places" style="color:#FFFFFF">popularity</a>
+	<a href="#" data-filter=".food" style="color:#FFFFFF">top rated</a>
+	<a href="#" data-filter=".objects" style="color:#FFFFFF">best seller</a>
+
+</div>
+	<ul class="nav nav-tabs">
+  		<li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+  		<li><a href="#profile" data-toggle="tab">Profile</a></li>
+  		<li><a href="#messages" data-toggle="tab">Messages</a></li>
+  		<li><a href="#settings" data-toggle="tab">Settings</a></li>
+	</ul>
+
+<!-- Tab panes -->
+	<div class="tab-content">
+  		<div class="tab-pane active" id="Store">...</div>
+  		<div class="tab-pane" id="Your collection">...</div>
+  		<div class="tab-pane" id="Upload">...</div>
+  	</div>
+    <div class="portfolioContainer">
+
+	<div class="objects col-md-3">
+		<p > <img src="images/book covers/ipod.jpg" alt="image"> </p>
+		<h4 class="product-name">
+		<a href="#">IPOD</a>
+		<h4 style="color:#FFFFFF">Author:</h4>
+		<h5 style="color:#FFFFFF">Released:</h5>
+		</h4>
+		
+	</div>
+	
+	<div class="people places col-md-3">
+		<p ><img src="images/book covers/download.jpg" alt="image"></p>
+		<h4 class="product-name">
+		<a href="#">Ayn Rand</a>
+		<h4 style="color:#FFFFFF">Author:</h4>
+		<h5 style="color:#FFFFFF">Released:</h5>
+	</div>	
+
+	<div class="food col-md-3">
+		<p ><img src="images/book covers/Healthy-Tipping-Point_high-res.jpg" alt="image"></p>
+		<h4 class="product-name">
+		<a href="#">Healthy-Tipping-Point</a>
+		<h4 style="color:#FFFFFF">Author:</h4>
+		<h5 style="color:#FFFFFF">Released:</h5>
+	</div>
+	
+	<div class="people places col-md-3">
+		<p ><img src="images/book covers/hobbit1.jpg" alt="image"></p>
+		<h4 class="product-name">
+		<a href="#">Hobbit</a>
+		<h4 style="color:#FFFFFF">Author:</h4>
+		<h5 style="color:#FFFFFF">Released:</h5>
+	</div>
+
+	<div class="places objects col-md-3">
+		<p ><img src="images/book covers/Healthy-Tipping-Point_high-res.jpg" alt="image"></p>
+		<h4 class="product-name">
+		<a href="#">Healthy-Tipping-Point</a>
+		<h4 style="color:#FFFFFF">Author:</h4>
+		<h5 style="color:#FFFFFF">Released:</h5>
+	</div>
+
+	<div class="people food objects col-md-3">
+		<p ><img src="images/book covers/Healthy-Tipping-Point_high-res.jpg" alt="image"></p>
+		<h4 class="product-name">
+		<a href="#">Healthy-Tipping-Point</a>
+		<h4 style="color:#FFFFFF">Author:</h4>
+		<h5 style="color:#FFFFFF">Released:</h5>
+	</div>
+
+	<div class="food objects col-md-3">
+		<p ><img src="images/book covers/Healthy-Tipping-Point_high-res.jpg" alt="image"></p>
+		<h4 class="product-name">
+		<a href="#">Healthy-Tipping-Point</a>
+		<h4 style="color:#FFFFFF">Author:</h4>
+		<h5 style="color:#FFFFFF">Released:</h5>
+	</div>	
+	
+	<div class="food col-md-3">
+		<p ><img src="images/book covers/Healthy-Tipping-Point_high-res.jpg" alt="image"></p>
+		<h4 class="product-name">
+		<a href="#">Healthy-Tipping-Point</a>
+		<h4 style="color:#FFFFFF">Author:</h4>
+		<h5 style="color:#FFFFFF">Released:</h5>
+	</div>	
+	
+</div>
+</div>
+ 
+<script type="text/javascript">
+
+$(window).load(function(){
+    var $container = $('.portfolioContainer');
+    $container.isotope({
+        filter: '*',
+        animationOptions: {
+            duration: 750,
+            easing: 'linear',
+            queue: false
+        }
+    });
+ 
+    $('.portfolioFilter a').click(function(){
+        $('.portfolioFilter .current').removeClass('current');
+        $(this).addClass('current');
+ 
+        var selector = $(this).attr('data-filter');
+        $container.isotope({
+            filter: selector,
+            animationOptions: {
+                duration: 750,
+                easing: 'linear',
+                queue: false
+            }
+         });
+         return false;
+    }); 
+});
+
+</script>
+
+
+			<div class="bs-example1" align="center">
+				<ul class="pagination" >
+					<li ><a href="#"> << </a></li>
+					<li ><a href="file:///D:/gautam/Project/Bootstrap/Bootstrap/home.html">1</a></li>
+					<li><a href="#">2</a></li>
+					<li><a href="#">3</a></li>
+					<li><a href="#">4</a></li>
+					<li><a href="#">5</a></li>
+					<li><a href="#">>></a></li>
+				</ul>
+			</div>
+
+    
+<div id="footer" style="background-color:#6F5499;clear:both;text-align:center;">
+<p style="color:#FF9900">egyaan.com</p></div>
+
+
