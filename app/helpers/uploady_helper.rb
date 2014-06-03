@@ -1,0 +1,2 @@
+module UploadyHelper
+end
