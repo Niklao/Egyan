@@ -1,4 +1,5 @@
 Egyan::Application.routes.draw do
+  root 'home#index'
   get "store" => "dashboard#index"
   post "login/auth"
   post "register/entered" => "register#entered"
@@ -11,7 +12,7 @@ Egyan::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
- root 'home#index'
+ 
  
 
   # Example of regular route:

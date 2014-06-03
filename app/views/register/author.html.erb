@@ -19,7 +19,7 @@
 		  <%= f.select(:gender , [ [ '-' , 1 ] , [ 'Male' , 2 ] , [ 'Female' , 3]] , class: "form-control tip-top") %>
 		  <%= check_box_tag(:agree , "" , html: { onselect: "agree()" } ) %>
 		  I Agree to terms and condition
-		  <%= f.submit "Create" , class: "btn btn-primary" , disabled: "disabled"%>
+		  <%= f.submit "Create" , class: "btn btn-primary" %>
 		<% end %>
 		<script type="text/javascript">
 			function agree () {

@@ -5,6 +5,7 @@ class LoginController < ApplicationController
   end
   def auth
     #render nothing: true
+    
     user=User.authenticate( params[:email_id][:User], params[:password][:password] )
 
     if user
