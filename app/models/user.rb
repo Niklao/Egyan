@@ -1,10 +1,6 @@
 class User < ActiveRecord::Base
   validates :email_id , uniqueness: true
-  validates :email_id, presence: true
-  
-  
-  
-  
+  validates :email_id , :first_name , :last_name , :phone_no , :birth_date , :address , :password , :type , presence: true
   
   def self.authenticate( email , password ) 
     user=User.find_by( email_id: "#{email}" ) 
