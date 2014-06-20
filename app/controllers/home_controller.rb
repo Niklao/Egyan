@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-   layout  "bootstrap1"
+   layout  "bootstrap_native"
   def index
 	 @user=User.new
   end

@@ -1,28 +1,23 @@
 <div style="height:350px;width:350px;position: relative;margin: 10% auto 20% auto;">
 	<div class="modal-content">
-		<%= form_tag( login_auth_path , class: "form_horizontal"  , onsubmit: "return jack();" ) do %>
+		<%= form_tag( login_auth_path , class: "form_horizontal" , remote: "true" ) do %>
       	<div class="modal-header">
        		<h4 class="modal-title text-left" id="myModalLabel">LOGIN</h4>
       	</div>
       	<div class="modal-body">
+      	 	<div id="warning">
+      	 	</div>	
       	 	<%= label(:email_id ,  "User ID" , class: "control-label"  ) %>
 	    	<%= text_field(:email_id , "User" , class: "form-control tip-top"  )  %>
-	  		<%= label(:password ,  "password" , class: "control-label"  ) %>
-	  		<%= password_field(:password  , "password" ,class: "form-control tip-top")  %>
+	  		<div id="pass">
+	  			<%= label(:password ,  "password" , class: "control-label") %>
+	  			<%= password_field(:password  , "password" ,class: "form-control tip-top") %>
+	  		</div>
 		</div>
       	<div class="modal-footer">
         	<%= submit_tag "Login" , class: "btn btn-primary"%>
       	</div>
       	<% end %>
     </div>	
-    <script type="text/javascript">
-    	function jack()
-			{
-				if(document.getElementById("email_id_User ID").value=="" || document.getElementById("password_password").value=="" )
-					{	
-						alert("All fields are mandatory");
-						return false;
-					}
-			}
-    </script>
+    
 </div>

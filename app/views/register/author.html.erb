@@ -2,7 +2,7 @@
   	<div class="container">
 	  	<%= form_for @user, url: {action: "entered"}, html: {class: "form_horizontal"} do |f| %>
 		  <%= f.label(:email_id , "Email Id" ,class: "control-label col-xs-3")  %>
-		  <%= f.text_field :email_id , class: "form-control tip-top"%>
+		  <%= f.text_field(:email_id , class: "form-control tip-top")%>
 		  <%= f.label :first_name , class: "control-label col-xs-3" , placeholder: "Email" %>
 		  <%= f.text_field :first_name , class: "form-control tip-top" %>
 		  <%= f.label :last_name , class: "control-label col-xs-3" %>

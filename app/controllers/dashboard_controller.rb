@@ -1,7 +1,8 @@
 class DashboardController < ApplicationController
-  layout  "dashboard"
+  layout  "bootstrap_native"
   def index
     @user_name=logger()
+    @book=Book.new
   end
   def setting
     
@@ -16,5 +17,15 @@ class DashboardController < ApplicationController
     else
       redirect_to login_path
     end
+  end
+  
+  def uploader
+    @book=Book.new
+  end
+  def step2
+    @book=Book.new
+  end
+  def step3
+    @book=Book.new
   end
 end

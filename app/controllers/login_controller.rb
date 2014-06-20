@@ -4,17 +4,16 @@ class LoginController < ApplicationController
     @user=User.new
   end
   def auth
-    #render nothing: true
-    
-    user=User.authenticate( params[:email_id][:User], params[:password][:password] )
-
-    if user
-      cookies[:user] = user
-      redirect_to store_path , status: 301
+    if ( params[:email_id][:User] == "" || params[:password][:password] == "")
+      render "confirm"
     else
-    
-   flash.now.alert = "its working"
-      redirect_to login_path
+      user=User.authenticate( params[:email_id][:User], params[:password][:password] )
+      if user 
+        cookies[:user] = user
+        render :js => "window.location = '/store'"
+      else
+        render "check"
+      end
     end
   end
   

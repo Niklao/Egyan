@@ -8,6 +8,9 @@ Egyan::Application.routes.draw do
   get "login" => "login#univ" 
   get "logout" => "login#logout"
   get "setting" => "dashboard#setting"
+  get "uploader" => "dashboard#uploader"
+  get "step2" => "dashboard#step2"
+  get "step3" => "dashboard#step3"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
