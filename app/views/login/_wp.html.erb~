@@ -1,0 +1,7 @@
+<div class="form-group has-error has-feedback">
+  <label class="control-label" for="inputError2">Password</label>
+  <input type="text" class="form-control" id="inputError2">
+  <%= label(:password ,  "password" , class: "control-label") %>
+	  			<%= password_field(:password  , "password" , id: "inputError2" ,class: "form-control tip-top") %>
+  <span class="glyphicon glyphicon-remove form-control-feedback"></span>
+</div>

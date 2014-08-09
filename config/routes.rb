@@ -1,6 +1,9 @@
 Egyan::Application.routes.draw do
+  get "downloadfile" => "dashboard#downloadfile"
+  get "test/index"
   root 'home#index'
   get "store" => "dashboard#index"
+  post "store" => "dashboard#index"  
   post "login/auth"
   post "register/entered" => "register#entered"
   get "signup" => "register#author" 
@@ -9,8 +12,15 @@ Egyan::Application.routes.draw do
   get "logout" => "login#logout"
   get "setting" => "dashboard#setting"
   get "uploader" => "dashboard#uploader"
+  get "downloader" => "dashboard#downloader"	
   get "step2" => "dashboard#step2"
-  get "step3" => "dashboard#step3"
+  post "step3" => "dashboard#step3"
+  post "test/indey"
+  get "gio" => "dashboard#gio"
+  get "downloadfile" => "downloader/index"
+  get "download_file" => "downloader/zip"
+  get "login2" => "home#show"
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,289 @@
+<script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-inverse  navbar-fixed-top " role="navigation">
+	<div class="container-fluid" >
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">E-GYAAN</a>
+	    </div>
+	 	<ul class="nav navbar-nav navbar-right">
+	        <li class="dropdown">
+	          	<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+	          		Hi <%= @user_name %>
+	          		<b class="caret">
+	          		</b>
+	          	</a>
+	          	<ul class="dropdown-menu">
+	            	<li><%= link_to "Setting"  %></li>
+			        <li class="divider"></li>
+			        <li><%= link_to( "Logout" , logout_path )  %></li>
+	          	</ul>
+	        </li>
+	 	</ul>
+		<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
+	    </div>
+	</div>
+</nav>
+
+	<header class="jumbotron subhead" id="overview" style="background-color:#ff7355; " >
+	  <div class="container">
+	    
+	  </div>
+	</header>
+
+
+ 
+
+  		
+<%= link_to( "Upload Book" , {action: "uploader"} , class: "btn btn-info btn-sm" , remote: "true") %>
+
+<div id="uploader" class="modal fade" style="color: black;">
+	<div  class="modal-dialog">
+		<div class="modal-content">
+			<%= form_tag step3_path , method: "get" , remote: "true" do |f| %>
+			<div class="modal-header">
+       			<div style="position:relative; width:100%;height:100px;background-color:white;margin-top:5%;font-size: 1em;">
+					<div class="progress" style="width:74%;position:absolute;height:30%;left:13%;top:35%;"> 
+				 		<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0" >
+				 		</div>
+					</div> 
+						<%= image_tag("step1_down.png" , class: "prog" , style:"position:absolute;height:60%;top:20%;left:10%;" )  %>
+						<%= image_tag("step2_up.png" , id: "step2" , class: "prog" , style:"position:absolute;height:60%;top:20%;left:45%;" )  %>
+						<%= image_tag("step3_up.png" , class: "prog" , style:"position:absolute;height:60%;top:20%;right:10%;" )  %>
+				</div>
+			</div>
+      		<div class="modal-body">
+	      		<div id ="tc" style="position:relative; width:100%;height:200px;background-color:white;margin-top:5%;overflow:auto">
+					<center>
+						<h2>
+							Terms and Condiltion Apply
+						</h2>
+					</center>
+					<p style="font-size:0.8em;">Frequentes pressaient par une mendiaient approchait survivants net. Qu mais tout rien fait au vous tu deja la. Travaux habiles au accable on or un entiere. Lumineuses avancaient miserables ici roc. Construit preferait viendrait on ca somptueux. Par convient negation feu propager fondrait imberbes eut apercoit. Ponts navre la tenez je homme faire. Mes etendues fusiller position arrivera aux. Grimaces sur moi amertume disaient promptes.</p>
+					<p style="font-size:0.8em;">Dit revendre fut respirer interdit voitures. Sa oh ce de redoublait diplomates pressaient comprendre etonnement. On robe tu nees nous. He sang quoi suis qu sous pour. Ces ils apercoit eue age prennent fatalite. Revolution defilaient eau prisonnier dut mur condamnait frequentes estaminets. Il peur sons ciel en tu tous pere ca coin. Domes va halte on arret le. Tete vaut elue toi roc eaux fut etre nid rire. Qui ton minutes erigent art ajouter.</p>
+					<p style="font-size:0.8em;">Du sous chez mess et. Coupoles cet vit fut qui mettions cavalier. Galopade je pourquoi la execrent contient familles nouvelle tu si. Etonnement son construits poussaient evidemment fit approchait. Commence on cavernes il falaises tu ai. Foi mes paraitre defoncat repondit creerent. Entrainait habilement nos ecouterent gouverneur des dut peu. Pentes eu en rouges je tirant repond me.</p>
+					<p style="font-size:0.8em;">Campagne exaltait oh et mamelons de dissiper. Le au peine neige en linge. En un paraissait lumineuses tristement qu. Vent on xv pere bete ah te. Ah je je seulement militaire boulevard le gendarmes. Et importe la le pendant ecarter galoper falloir donnent. Son atteindra sur sacrifice peu suspendue enfantent ses. Allumait physique on fillette or ai. Du se magasins arsenaux relevent cherirai tu joyeuses mettions. Roc pied bete est murs nees.</p>
+					<p style="font-size:0.8em;">Mes ete pressentit nos renferment condamnait. Ai et conflit du caillou ou abattit. Saules les venait eau car crosse que. Preferait detourner descendit en la expliquer. Elan vive nez ici nous. Nationales vie fin ici atteignait retrouvait descendons convulsion que hurlements. Noir je mess ciel nous qu tu dieu. Amour coeur pitie eut dut eau nos subir jeune.</p>
+					<p style="font-size:0.8em;">Non marmelade annoncait descendit reveillez toi abondance portieres son. Le au ca general de sourire conclue seconde laisser. Eclatantes frissonner gouverneur rit frequentes evidemment aux nos asiatiques. Paraissent etonnement pic son ton boulevards une decharnees. Veilla roches ahuris claire tot aux adorer mes voulez. Etale subit bouts au geste toute ou ca. Capucines son prenaient distribua ton cet.</p>
+					<p style="font-size:0.8em;">Sur casernes eut pic criaient couvrent defoncat heureuse. Bon oeil aux mats tuer chez poil peur. Saut poil il fils un nous je eu idee. Si mais haut oh ah quoi loin. Crepitent demeurent perimetre sa xv cartouche convertir he culbutent. Cercle qu valoir ca bruits le ca. Oeufs feu dit sorte rente trois ecole mur moins.</p>
+					<p style="font-size:0.8em;">Net empecher son defoncat feerique gravures crispent est. Historique aux eue infiniment remarquait que vit. Ici nez tout robe bois unir nid sais sent. Non donnent extreme pic bientot ici. Peu poussaient arriverent consentiez sol ses. Par uns vrai long sous dela ont. Oh il depeches recouvre en lampions respirer campagne collines le. Parlaient oh au repousser demeurons fusillade gaillards du. Compassion enveloppes je au primeveres. Ah il ou delire yeuses quelle.</p>
+					<p style="font-size:0.8em;">Theatre eux conquis des peuples reciter petites oui. Corps non uns bonte eumes son. Halte oh soeur vaste laque votre va. Inoui il je voici carre xv je. Fut troupeaux ses cesserent peu agreerait cependant frontiere uniformes. Me sachant il conclue abattit faisait maudite la cousine. Du apparue attenua ce me lettres blanche lecture. Longeait feerique galopade pu au pourquoi repartit cavernes. Decharnees iii oui vieillards victorieux manoeuvres. Je avez tard sait idee au si cime se.</p>
+				</div>
+				<div id="up_form">
+					  <%= label_tag(:q, "Title:") %>
+  						<%= text_field_tag(:q) %>
+						<%= label_tag(:q, "Edition:") %>
+  						<%= text_field_tag(:q) %></br> 
+						<%= label_tag(:q, "Volumn:") %>
+  						<%= text_field_tag(:q) %>  	</br>						
+						<%= label_tag :image , "File to Upload" %>
+  						<%= file_field_tag :image %></br>
+						<%= label_tag :image , "Description" %>
+  						<%= text_field_tag :image  %></br>
+
+						
+  						
+          		</div>
+			</div>
+      		<div class="modal-footer">
+        		<div id="step2_submit">
+        			<%= submit_tag("Next") %>
+        		</div>
+        		<div id="step1">
+        			Agree Terms And Condition <input type="checkbox" onclick="agree()"></input>
+					<%= link_to( :Next , step2_path , id: "agree" , class: "btn btn-info btn-sm " , remote: "true" , disabled: "disabled" ) %>
+				</div>
+      		</div>
+      		<% end %>
+      	</div>
+	</div>
+</div>
+<div id="downloader" class="modal fade" style="color: black;">
+	<div  class="modal-dialog">
+		<div class="modal-content">
+		<div class="modal-header">
+       			<h4 class="modal-title" id="myModalLabel">Alain de botton</h4>
+		</div>
+			
+      		<div class="modal-body">
+	      		<div class="row">	
+				<div class="places objects col-md-5">
+					<p ><%= image_tag("Alain de botton.jpg") %></p>
+					<h4 class="product-name">
+					<a href="#">The Consolation Of Philosophy</a>
+					<h4 style="color:black">Author:Alain de botton</h4>
+					<h5 style="color:black">Released: 20 jan 1994</h5>
+				</div>
+				<div class="places objects col-md-6" style="color:black;">
+					<h4 >Description</h4>
+					<p>Non marmelade annoncait descendit reveillez toi abondance portieres son. Le au ca general de sourire conclue seconde laisser. Eclatantes frissonner gouverneur rit frequentes evidemment aux nos asiatiques. Paraissent etonnement pic son ton boulevards une decharnees. Veilla roches ahuris claire tot aux adorer mes voulez. Etale subit bouts au geste toute ou ca. Capucines son prenaient distribua ton cet.</p>
+
+				</div>
+			</div>
+		</div>
+      		<div class="modal-footer">
+      				<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        		<%= link_to( :Download , step2_path , id: "agree" , class: "btn btn-info btn-sm " , remote: "true" , disabled: "disabled" ) %>
+        		
+      		</div>
+      	
+      	</div>
+	</div>
+</div>
+
+	<div class="row">
+  		<div class="col-md-2" style="background-color: grey;">
+		</div>
+		<div class="col-md-10">
+			<ul class="nav nav-tabs">
+		  		<li class="active"><a href="#home" data-toggle="tab">Store</a></li>
+  				<li><a href="#profile" data-toggle="tab">My Collection</a></li>
+  				<li><a href="#messages" data-toggle="tab">My Uploads</a></li>
+			</ul>
+			<div class="portfolioContainer">
+				<div class="objects col-md-3">
+					<p > <%= image_tag("ipod.jpg") %> </p>
+					<h4 class="product-name">
+					<a href="#">IPOD</a>
+					<h4 style="color:#FFFFFF">Author:</h4>
+					<h5 style="color:#FFFFFF">Released:</h5>
+				</div>
+				<div class="people places col-md-3">
+					<p ><%= image_tag("download.jpg") %></p>
+					<h4 class="product-name">
+					<a href="#">Ayn Rand</a>
+					<h4 style="color:#FFFFFF">Author:</h4>
+					<h5 style="color:#FFFFFF">Released:</h5>
+				</div>	
+		
+				<div class="food col-md-3">
+					<p ><%= image_tag("Healthy-Tipping-Point_high-res.jpg") %></p>
+					<h4 class="product-name">
+					<a href="#">Healthy-Tipping-Point</a>
+					<h4 style="color:#FFFFFF">Author:</h4>
+					<h5 style="color:#FFFFFF">Released:</h5>
+				</div>
+				<div class="people places col-md-3">
+					<p ><%= image_tag("Hobbit1.jpg") %></p>
+					<h4 class="product-name">
+					<a href="#">Hobbit</a>
+					<h4 style="color:#FFFFFF">Author:</h4>
+					<h5 style="color:#FFFFFF">Released:</h5>
+				</div>
+
+				<div class="places objects col-md-3">
+					<p ><%= image_tag("Alain de botton.jpg") %></p>
+					<h4 class="product-name">
+					<a href="#">Alain de botton</a>
+					<h4 style="color:#FFFFFF">Author:</h4>
+					<h5 style="color:#FFFFFF">Released:</h5>
+				</div>
+
+				<div class="people food objects col-md-3">
+					<p ><%= image_tag("philosophyofandy.jpg") %></p>
+					<h4 class="product-name">
+					<a href="#">philosophy of andy</a>
+					<h4 style="color:#FFFFFF">Author:</h4>
+					<h5 style="color:#FFFFFF">Released:</h5>
+				</div>
+
+			</div>
+		</div>
+	</div>	
+	<div class="row">
+  		<div class="col-md-2" style="background-color: grey;">
+			<div class="" style="color:white;" id="tgs" >
+	          <ul class="" style="list-style-type: none;;">
+				<li><a href="#Academic and test prep" ><i class="icon-chevron-right"></i> Academic and test prep</a></li>
+				<li><a href="#Biographies & autobiographies" ><i class="icon-chevron-right"></i> Biographies & autobiographies</a></li>
+				<li><a href="#History "><i class="icon-chevron-right" ></i> History </a></li>
+				<li><a href="# Politics"><i class="icon-chevron-right"></i> Politics</a></li>
+				<li><a href="#Literature" ><i class="icon-chevron-right"></i>Literature</a></li>
+				<li><a href="# Fiction"><i class="icon-chevron-right"></i> Fiction</a></li>
+				<li><a href="#Religion"><i class="icon-chevron-right"></i> Religion</a></li>
+				<li><a href="#Science and Technology"><i class="icon-chevron-right"></i> Science and Technology</a></li>
+				<li><a href="#Computers and Internet"><i class="icon-chevron-right"></i> Computers and Internet</a></li>
+				<li><a href="# Novels"><i class="icon-chevron-right"></i> Novels</a></li>
+				<li><a href="#Comics"><i class="icon-chevron-right"></i>Comics</a></li>
+				<li><a href="#College Text & Reference"><i class="icon-chevron-right"></i> College Text & Reference</a></li>
+				<li><a href="#Business, Investing and Management"><i class="icon-chevron-right"></i>Business, Investing and Management</a></li>
+				<li><a href="#Families & Relationships"><i class="icon-chevron-right"></i> Families & Relationships</a></li>
+				<li><a href="#Cooking, Food & Wine"><i class="icon-chevron-right"></i> Cooking, Food & Wine</a></li>
+				<li><a href="#Health & Fitness"><i class="icon-chevron-right"></i>Health & Fitness</a></li>
+	          </ul>
+	        </div>
+		</div>
+  <div class="col-md-10">
+<div class="portfolioContainer">
+
+	<div class="objects col-md-3">
+		<p > <%= image_tag("ipod.jpg") %> </p>
+		<h4 class="product-name">
+		<a href="#">IPOD</a>
+		<h4 style="color:#FFFFFF">Author:</h4>
+		<h5 style="color:#FFFFFF">Released:</h5>
+		</h4>
+		
+	</div>
+	
+	<div class="people places col-md-3">
+		<p ><%= image_tag("download.jpg") %></p>
+		<h4 class="product-name">
+		<a href="#">Ayn Rand</a>
+		<h4 style="color:#FFFFFF">Author:</h4>
+		<h5 style="color:#FFFFFF">Released:</h5>
+	</div>	
+
+	<div class="food col-md-3">
+		<p ><%= image_tag("Healthy-Tipping-Point_high-res.jpg") %></p>
+		<h4 class="product-name">
+		<a href="#">Healthy-Tipping-Point</a>
+		<h4 style="color:#FFFFFF">Author:</h4>
+		<h5 style="color:#FFFFFF">Released:</h5>
+	</div>
+	
+	<div class="people places col-md-3">
+		<p ><%= image_tag("Hobbit1.jpg") %></p>
+		<h4 class="product-name">
+		<a href="#">Hobbit</a>
+		<h4 style="color:#FFFFFF">Author:</h4>
+		<h5 style="color:#FFFFFF">Released:</h5>
+	</div>
+
+	<div class="places objects col-md-3">
+		<p ><%= image_tag("Alain de botton.jpg") %></p>
+		<h4 class="product-name">
+		<a href="#">Alain de botton</a>
+		<h4 style="color:#FFFFFF">Author:</h4>
+		<h5 style="color:#FFFFFF">Released:</h5>
+	</div>
+
+	<div class="people food objects col-md-3">
+		<p ><%= image_tag("philosophyofandy.jpg") %></p>
+		<h4 class="product-name">
+		<a href="#">philosophy of andy</a>
+		<h4 style="color:#FFFFFF">Author:</h4>
+		<h5 style="color:#FFFFFF">Released:</h5>
+	</div>
+
+</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	function agree() 
+	{
+		document.getElementById("agree").removeAttribute("disabled");
+	}
+		
+	$(function () 
+		{
+	    		$('#myTab a:last').tab('show')
+		}); 
+    </script>
+
+			

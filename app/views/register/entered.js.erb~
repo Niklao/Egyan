@@ -1,0 +1,4 @@
+alert("yo");
+$("#error_box").html('<div id="w_bo" class="alert alert-danger"></div>');    
+$("#w_bo").html('<h4><%= pluralize(@user_j.errors.count, "error") %> Below:</h4> <ul> <% @user_j.errors.full_messages.each do |msg| %><li><%= msg %></li><% end %></ul>');
+  

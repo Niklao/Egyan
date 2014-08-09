@@ -1,0 +1,6 @@
+$(".progress-bar").css("width", "50%");
+$(".step1").remove();
+$(".modal-content").replaceWith( ' <%=j image_tag("step2_down.png" , class: "prog" , style:"position:absolute;height:60%;top:20%;left:45%;" )  %> ' ) ;
+$("#tc,#step1").remove();
+$("#up_form,#step2_submit").css("display","inline ");
+

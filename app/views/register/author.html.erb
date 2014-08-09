@@ -1,26 +1,45 @@
-<h1>AUTHOR Sign Up</h1>
-  	<div class="container">
-	  	<%= form_for @user, url: {action: "entered"}, html: {class: "form_horizontal"} do |f| %>
-		  <%= f.label(:email_id , "Email Id" ,class: "control-label col-xs-3")  %>
-		  <%= f.text_field(:email_id , class: "form-control tip-top")%>
-		  <%= f.label :first_name , class: "control-label col-xs-3" , placeholder: "Email" %>
-		  <%= f.text_field :first_name , class: "form-control tip-top" %>
-		  <%= f.label :last_name , class: "control-label col-xs-3" %>
-		  <%= f.text_field :last_name , class: "form-control tip-top" %>
-		  <%= f.label :password , class: "control-label col-xs-3" %>
-		  <%= f.password_field :password  , class: "form-control tip-top"  %>
-		  <%= f.label(:password ,  "Confirm Password" , class: "control-label col-xs-3" ) %>
-		  <%= f.password_field :password  , class: "form-control tip-top"  %>
-		  <%= f.label(:birth_date ,  "Birth Date" , class: "control-label col-xs-3" ) %>
-		  <%= f.date_select( :birth_date ,class: "form-control" )%>
-		  <%= f.label(:address ,  "Address" , class: "control-label col-xs-3" ) %>
-		  <%= f.text_area(:address ,class: "form-control" )%>
-		  <%= f.label :gender, "Gender" , class: "control-label col-xs-3" %>
-		  <%= f.select(:gender , [ [ '-' , 1 ] , [ 'Male' , 2 ] , [ 'Female' , 3]] , class: "form-control tip-top") %>
-		  <%= check_box_tag(:agree , "" , html: { onselect: "agree()" } ) %>
-		  I Agree to terms and condition
+<h1 style="color: black;">AUTHOR Sign Up</h1>
+	
+  	<div class="container" style="color:black;">
+  		<div id="error_box"></div>
+	  	<%= form_for @user, url: {action: "entered"}, html: {class: "form_horizontal"}, remote: "true" , role: "form" do |f| %>
+	  		<div class="form-group">
+		  		<%= f.label(:email_id , "Email Id" ,class: "control-label col-sm-2")  %>
+		  		<%= f.text_field(:email_id , class: "form-control  ")%>
+		  	</div>
+		  	<div class="form-group">
+		  		<%= f.label :first_name , class: "control-label col-sm-2" , placeholder: "Email" %>
+		  		<%= f.text_field :first_name , class: "form-control " %>
+		  	</div>
+			<div class="form-group">		  
+		  		<%= f.label :last_name , class: "control-label col-sm-2" %>
+		  		<%= f.text_field :last_name , class: "form-control " %>
+		  	</div>
+		  	<div class="form-group">
+		  		<%= f.label :password , class: "control-label col-sm-2" %>
+		  		<%= f.password_field :password  , class: "form-control "  %>
+		  	</div>
+		  	<div class="form-group">
+		  		<%= label(:password ,  "Confirm password" , class: "control-label col-sm-2") %>
+	  			<%= password_field(:password  , "password" ,class: "form-control") %>	
+		  	
+		  	</div>
+		  	<div class="form-group">
+		  		<%= f.label(:birth_date ,  "Birth Date" , class: "control-label col-sm-2" ) %>
+		  		<%= f.date_select( :birth_date ,class: "form-control" )%>
+		  	</div>
+		  	<div class="form-group">
+		  		<%= f.label :gender, "Gender" , class: "control-label col-sm-2" %>
+		  		<%= f.select(:gender , [ [ '-' , 1 ] , [ 'Male' , 2 ] , [ 'Female' , 3]] , class: "form-control ") %>
+		  	</div>
+		 	<div class="form-group">  
+		  		<%= check_box_tag(:agree , "" , html: { onselect: "agree()" } ) %>
+		 		I Agree to terms and condition
+		 	</div>
 		  <%= f.submit "Create" , class: "btn btn-primary" %>
+		  </div>
 		<% end %>
+		
 		<script type="text/javascript">
 			function agree () {
 				alert("hello");

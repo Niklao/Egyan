@@ -1,0 +1,10 @@
+$('#title_m').html('<%= @book_l.title %>');
+$('#myModalLabel').html('<%= @book_l.title %>');
+$('#author_m').html('Author:<%= @book_l.author_name %>');
+$('#relesedate_m').html('<%= @book_l.relese_date %>');
+$('#descrip_m').html('<%= @book_l.discrip %>');
+$('#downloader').modal('show');
+
+$('#footy').html('<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> <%= link_to( :Download , {action: "downloadfile" , bookse: @book_l.id } , id: "agree" , class: "btn btn-info btn-sm " , remote: "true"  ) %>');
+
+

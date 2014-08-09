@@ -1,0 +1,4 @@
+<%= f.label(:address ,  "Address" , class: "control-label col-sm-2" ) %>
+		  <div class="col-sm-10">
+		  <%= f.text_area(:address ,class: "form-control" )%>
+		  </div>

@@ -1,30 +1,48 @@
-<div class="container-fluid">
-	<div id="header" style="background-color:#6f5499;height: 138px;width:1366px;" class="jumbotron">
-		<h1 style="position: absolute; top:5px; left:300px;color:#F0D01A">E-GYAAN</h1>
-		<h3 style="position: absolute; top:60px; left:500px;">....reading redefined</h3>
-		<div class="btn-group" style="position: absolute; top:20px; left:1020px; float:right" >
-			
-			<%= link_to(controller: "register" , action: "author") do %>
-				<button type="button" class="btn button glyphicon-pencil ">
-					SIGN UP
-				</button>
-			<% end %>
-			<a href="#myModal" data-toggle="modal">
+
+	<!-- fdd -->
+	
+	<nav class="navbar navbar-inverse" role="navigation" style="margin: 0;z-index: 3;overflow: hidden">
+  	
+  <div class="container">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+      	<%= image_tag("logo.png", style: "opacity:1;") %> &nbsp &nbsp Egyaan
+      </a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+      
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+        	<%= link_to("SIGN UP" , {controller: "register" , action: "author"})  %>
+        </li>
+        <li>
+        	<%= link_to("SIGN IN" , {controller: "home" , action: "show"} , remote: true )  %>
+        	<a href="#myModal" data-toggle="modal">
 				SIGN IN
 			</a>
-		</div>
-		<div class="btn-group" style="position: absolute; top:55px; left:1020px; float:right">
-			
-		</div>
-	</div>
+		</li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+	<!-- fdd -->
 	<div id="myModal" class="modal fade">
-		<div  class="modal-dialog">
+		<div  class="modal-dialog" style="color:black;">
 			<div class="modal-content">
 				<%= form_tag( login_auth_path , class: "form_horizontal" , remote: "true" ) do %>
       			<div class="modal-header">
+      				<%= image_tag("logo.png", style: "opacity:1;") %>
        				<h4 class="modal-title" id="myModalLabel">LOGIN</h4>
-       				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-		      	</div>
+       						      	</div>
       			<div class="modal-body">
 	      	 		<div id="warning">
 		      	 	</div>	
@@ -43,31 +61,63 @@
     		</div>
 		</div>
 	</div>
-	<div class="row">
-	<div class="col-xs-2">
+
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel" style="top:-70px;z-index: 1;" >
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner">
+    <div class="item active">
+      <%= image_tag("img1.jpg") %>
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+    <div class="item">
+      <%= image_tag("img2.jpg") %>
+      <div class="carousel-caption">
+        ...
+      </div>
+    </div>
+    ...
+  </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+  </a>
+</div>
+<div style="background-color:#ff7355;height: 100px;width: 100%;top:-70px;">
+	<div class="container"><h3><center><span style="font-style:italic">"Frequentes pressaient par une mendiaient approchait survivants net."</center></h3></div>
+</div>
+<div style="background-color:#ff7355;height: 300px;width: 100%;top:-70px;">
+	<div class="container">
+		<div class="row">
+  			<div class="col-md-4"> Il peur sons ciel en tu tous pere ca coin. Domes va halte on arret le.Dit revendre fut respirer interdit voitures. Sa oh ce de redoublait diplomates pressaient comprendre etonnement. On robe tu nees nous. He sang quoi suis qu sous pour. Ces ils apercoit eue age prennent fatalite. Revolution defilaient eau prisonnier dut mur condamnait frequentes estaminets.</div>
+  			<div class="col-md-4">Dit revendre fut respirer interdit voitures. Sa oh ce de redoublait diplomates pressaient comprendre etonnement. On robe tu nees nous. He sang quoi suis qu sous pour. Ces ils apercoit eue age prennent fatalite. Revolution defilaient eau prisonnier dut mur condamnait frequentes estaminets. Il peur sons ciel en tu tous pere ca coin. Domes va halte on arret le.</div>
+  			<div class="col-md-4"> Domes va halte on arret le.Dit revendre fut respirer interdit voitures. Sa oh ce de redoublait diplomates pressaient comprendre etonnement. On robe tu nees nous. He sang quoi suis qu sous pour. Ces ils apercoit eue age prennent fatalite. Revolution defilaient eau prisonnier dut mur condamnait frequentes estaminets. Il peur sons ciel en tu tous pere ca coin.</div>
+		</div>
 	</div>
-		<div style="background-color:#000000; " id="myCarousel" class="carousel slide col-xs-10 button">
-			<!--<div id="myCarousel" class="carousel slide">-->
-			<!-- Carousel indicators -->
-				<ol class="carousel-indicators">
-					<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-					<li data-target="#myCarousel" data-slide-to="1"></li>
-					<li data-target="#myCarousel" data-slide-to="2"></li>
-				</ol>   
-			<!-- Carousel items -->
-			<div class="carousel-inner">
-				
-				<div class="active item"><%= image_tag "s1.jpg" , class: "img" %></div>
-				<div class="item"><img class="img" src="http://marketmybook.in/wp-content/uploads/2013/05/old-books-bible-candle.jpg"></div>
-				<div class="item"><img class="img" src="http://img.talkandroid.com/uploads/2013/11/stack_of_books.jpg"></div>
-			
-			</div>
-			<!-- Carousel nav -->
-			<a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-			<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
-		</div>
-		</div>
 </div>
-<div id="footer" style="background-color:#470024;clear:both;text-align:center;">
-<p style="color:#FF9900">egyaan.com</p></div>
+<div style="height: 200px;width: 100%;top:-70px;">
+	
 </div>
+<!--div style="position:fixed;height:200px;width: 100%;bottom:-70px;top:0px;z-index: 1">
+	<div class="container">
+		<div class="row">
+  			<div class="col-md-3"> Il peur sons ciel en tu tous pere ca coin. Domes va halte on arret le.Dit revendre fut respirer interdit voitures. Sa oh ce de redoublait diplomates pressaient comprendre etonnement. On robe tu nees nous. He sang quoi suis qu sous pour. Ces ils apercoit eue age prennent fatalite. Revolution defilaient eau prisonnier dut mur condamnait frequentes estaminets.</div>
+  			<div class="col-md-3">Dit revendre fut respirer interdit voitures. Sa oh ce de redoublait diplomates pressaient comprendre etonnement. On robe tu nees nous. He sang quoi suis qu sous pour. Ces ils apercoit eue age prennent fatalite. Revolution defilaient eau prisonnier dut mur condamnait frequentes estaminets. Il peur sons ciel en tu tous pere ca coin. Domes va halte on arret le.</div>
+  			<div class="col-md-3"> Domes va halte on arret le.Dit revendre fut respirer interdit voitures. Sa oh ce de redoublait diplomates pressaient comprendre etonnement. On robe tu nees nous. He sang quoi suis qu sous pour. Ces ils apercoit eue age prennent fatalite. Revolution defilaient eau prisonnier dut mur condamnait frequentes estaminets. Il peur sons ciel en tu tous pere ca coin.</div>
+  			<div class="col-md-3"> Domes va halte on arret le.Dit revendre fut respirer interdit voitures. Sa oh ce de redoublait diplomates pressaient comprendre etonnement. On robe tu nees nous. He sang quoi suis qu sous pour. Ces ils apercoit eue age prennent fatalite. Revolution defilaient eau prisonnier dut mur condamnait frequentes estaminets. Il peur sons ciel en tu tous pere ca coin.</div>
+		</div>
+	</div>
+</div>-->
+

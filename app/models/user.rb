@@ -1,8 +1,11 @@
 class User < ActiveRecord::Base
   validates :email_id , uniqueness: true
-  validates :email_id , :first_name , :last_name , :phone_no , :birth_date , :address , :password , :type , presence: true
   
-  def self.authenticate( email , password ) 
+  
+  validates :email_id , :first_name , :last_name , :password , presence: true    
+   
+  
+def self.authenticate( email , password ) 
     user=User.find_by( email_id: "#{email}" ) 
     if user
       if user.password == password
@@ -21,4 +24,14 @@ class User < ActiveRecord::Base
     return email
   end
 
+	def self.get_id( email ) 
+    user=User.find_by(email_id: "#{email}" ) 
+    email=User
+    return email
+  end
+  def self.get_name( email ) 
+    user=User.find_by(email_id: "#{email}" ) 
+    email=user.first_name + user.last_name 
+    return email
+  end
 end

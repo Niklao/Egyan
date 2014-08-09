@@ -1,17 +1,17 @@
 class RegisterController < ApplicationController
-  layout "bootstrap2"
+  layout "bootstrap_native"
   def author
     @user=User.new
   end
   def entered
-    @user=User.new(user_params)
-    if @user.save
-      
+    @user_j=User.new(user_params)
+    if @user_j.save
+      	render :js => "window.location = '/login'"
      else
-      redirect_to signup_path
+      render 'entered'
     end
   end
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :email_id , :phone_no, :password )
+    params.require(:user).permit(:first_name, :last_name, :email_id , :password, :gender )
   end
 end

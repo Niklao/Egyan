@@ -1,0 +1,7 @@
+<%= form_tag(test_indey_path, method: "post") do %>
+  <%= label_tag(:q, "Search for:") %>
+  <%= text_field_tag(:q) %>
+  <%= label_tag :image , "" %>
+  <%= file_field_tag :image %>
+  <%= submit_tag("Search") %>
+<% end %>
