@@ -26,12 +26,12 @@ def self.authenticate( email , password )
 
 	def self.get_id( email ) 
     user=User.find_by(email_id: "#{email}" ) 
-    email=User
+    email=user.id
     return email
   end
   def self.get_name( email ) 
     user=User.find_by(email_id: "#{email}" ) 
-    email=user.first_name + user.last_name 
+    email=user.first_name + " " + user.last_name 
     return email
   end
 end

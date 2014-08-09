@@ -1,10 +1,5 @@
-
-	<!-- fdd -->
-	
-	<nav class="navbar navbar-inverse" role="navigation" style="margin: 0;z-index: 3;overflow: hidden">
-  	
+<nav class="navbar navbar-inverse" role="navigation" style="margin: 0;z-index: 3;overflow: hidden">
   <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
@@ -13,21 +8,16 @@
         <span class="icon-bar"></span>
       </button>
       <a class="navbar-brand" href="#">
-      	<%= image_tag("logo.png", style: "opacity:1;") %> &nbsp &nbsp Egyaan
+      	<%= image_tag("logo.png", style: "opacity:1 !important;") %> &nbsp &nbsp Egyaan
       </a>
     </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-      
       <ul class="nav navbar-nav navbar-right">
         <li>
-        	<%= link_to("SIGN UP" , {controller: "register" , action: "author"})  %>
+        	<%= link_to("SIGN UP" , {controller: "register" , action: "author" , style: "opacity: 1 !important;"})  %>
         </li>
         <li>
         	<%= link_to("SIGN IN" , {controller: "home" , action: "show"} , remote: true )  %>
-        	<a href="#myModal" data-toggle="modal">
-				SIGN IN
-			</a>
+        	
 		</li>
       </ul>
     </div><!-- /.navbar-collapse -->

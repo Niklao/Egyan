@@ -35,7 +35,6 @@
 	<div class="container">
 	</div>
 </header>
-<%= link_to( "Download Reader" , {action: "uploader"} , class: "btn btn-info btn-sm" , remote: "true") %>
 
 <div id="uploader" class="modal fade" style="color: black;">
 	<div  class="modal-dialog">
@@ -93,12 +92,11 @@
 					<%= f.label :image , "File to Upload" %>
   					<%= f.file_field :image %>
   				</div>
-  				
-			</div>
+  			</div>
 		</div>
       <div class="modal-footer">
         	<div id="step2_submit">
-        		<%= f.submit :create  %>
+        		<%= f.submit :Create , class: "btn btn-info btn-sm" , remote: "true" %>
         	</div>
         	<div id="step1">
         		Agree Terms And Condition <input type="checkbox" onclick="agree()"></input>
@@ -146,7 +144,7 @@
       	<div class="modal-footer" id="footy">
       		<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         		<%= link_to( :Download , step2_path , id: "agree" , class: "btn btn-info btn-sm " , remote: "true" , disabled: "disabled" ) %>
-        	</div>
+        </div>
       </div>
 	</div>
 </div>
@@ -202,14 +200,27 @@
         
         <div id="sectionB" class="tab-pane fade">
             <h3>My Collection</h3>
-            <p>Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
+            <p style="color: black;" >Vestibulum nec erat eu nulla rhoncus fringilla ut non neque. Vivamus nibh urna, ornare id gravida ut, mollis a magna. Aliquam porttitor condimentum nisi, eu viverra ipsum porta ut. Nam hendrerit bibendum turpis, sed molestie mi fermentum id. Aenean volutpat velit sem. Sed consequat ante in rutrum convallis. Nunc facilisis leo at faucibus adipiscing.</p>
         </div>
-        <div id="sectionC" class="tab-pane fade">
+        <div id="sectionC" class="tab-pane fade" style="color: black;">
             <h3>My Uploads</h3>
             <p>WInteger convallis, nulla in sollicitudin placerat, ligula enim auctor lectus, in mollis diam dolor at lorem. Sed bibendum nibh sit amet dictum feugiat. Vivamus arcu sem, cursus a feugiat ut, iaculis at erat. Donec vehicula at ligula vitae venenatis. Sed nunc nulla, vehicula non porttitor in, pharetra et dolor. Fusce nec velit velit. Pellentesque consectetur eros.</p>
             <%= link_to( "Upload Book" , {action: "uploader"} , class: "btn btn-info btn-sm" , remote: "true") %>
-            	
+            <div class="portfolioContainer">
+				<div style="color:black;">
+				<% @book_u.each do |booky| %>
+									<div class="objects col-md-3">										
+					<%= link_to(  {action: "downloader" , bookse: booky.id }  , remote: "true")  do %>
+						<p> <%= image_tag("ipod.jpg") %> </p>
+  							Name: <%= booky.title %><br>
+  						<h4 style="color:#FFFFFF">Author:<%= booky.author_name %></h4>
+						<h5 style="color:#FFFFFF">Released:<%= booky.relese_date %></h5>
+					<% end %>
+					</div>
+				<% end %>
+				</div>
 			</div>
+        </div>
         </div>
         <div id="sectionD" class="tab-pane fade">
             <h3>Dropdown 2</h3>
